@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Editar servicio</title>
+</head>
+<body>
+    <h1>Editar servicio</h1>
+    <form id="productEditForm" action="/products/<%= productToEdit.id %>?_method=PUT" method="post">
+        <div>
+            <label>Nombre</label>
+            <input type="text" name="name" value="<%= productToEdit.name %>" required>
+        </div>
+        <div>
+            <label>Descripción</label>
+            <textarea name="description" required><%= productToEdit.description %></textarea>
+        </div>
+        <div>
+            <label>Categoría</label>
+            <input type="text" name="category" value="<%= productToEdit.category %>" required>
+        </div>
+        <div>
+            <label>Precio</label>
+            <input type="number" name="price" min="0" value="<%= productToEdit.price %>" required>
+        </div>
+        <button type="submit">Guardar cambios</button>
+    </form>
+    <script src="/js/validateProductEdit.js"></script>
+    <form action="/products/<%= productToEdit.id %>?_method=DELETE" method="post" style="margin-top:1rem;">
+        <button type="submit">Eliminar</button>
+    </form>
+    <p><a href="/products/<%= productToEdit.id %>">Volver</a></p>
+</body>
+</html>
+

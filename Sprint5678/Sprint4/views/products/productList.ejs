@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Servicios</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Servicios disponibles</h1>
+        <form class="mb-3" method="get" action="/products">
+            <div style="display:flex; gap:8px; align-items:center;">
+                <input type="text" name="q" placeholder="Buscar..." value="<%= q || '' %>">
+                <select name="category">
+                    <option value="">Todas las categorías</option>
+                    <option value="hogar" <%= category==='hogar'?'selected':'' %>>Hogar</option>
+                    <option value="exterior" <%= category==='exterior'?'selected':'' %>>Exterior</option>
+                </select>
+                <button type="submit">Filtrar</button>
+            </div>
+        </form>
+        <a class="btn-secondary" href="/products/create">Crear servicio</a>
+        <ul class="product-list">
+            <% products.forEach(p => { %>
+                <li>
+                    <div><a href="/products/<%= p.id %>"><%= p.name %></a></div>
+                    <div class="mt-1">Categoría: <%= p.category %></div>
+                    <div class="mt-1">Precio: $<%= p.price %></div>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>
+

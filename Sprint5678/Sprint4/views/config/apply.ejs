@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Solicitar para trabajar</title>
+    </head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Solicitar para trabajar</h1>
+        <% if (typeof success !== 'undefined') { %>
+            <div class="mt-2">✅ <%= success %></div>
+        <% } %>
+        <form action="/config/apply" method="post" enctype="multipart/form-data">
+            <div>
+                <label>Nombre completo</label>
+                <input type="text" name="name" required>
+            </div>
+            <div>
+                <label>DNI</label>
+                <input type="text" name="dni" required>
+            </div>
+            <div>
+                <label>Categoría/Rubro</label>
+                <input type="text" name="categoria" placeholder="plomero, electricista, jardinero..." required>
+            </div>
+            <div>
+                <label>Descripción</label>
+                <textarea name="descripcion" placeholder="Experiencia, disponibilidad, zona..." required></textarea>
+            </div>
+            <div>
+                <label>Documentación (hasta 5 archivos)</label>
+                <input type="file" name="documents" multiple>
+            </div>
+            <button type="submit">Enviar solicitud</button>
+        </form>
+    </div>
+</body>
+</html>
+

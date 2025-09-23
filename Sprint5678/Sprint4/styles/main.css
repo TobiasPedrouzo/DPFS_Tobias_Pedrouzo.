@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+    text-align: left;
+}
+
+.page-title {
+    font-size: 28px;
+    margin: 8px 0 16px;
+}
+
+.services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Forms */
+form {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 520px;
+    margin: 12px auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="file"],
+textarea,
+select {
+    padding: 10px 12px;
+    border: 1px solid #cfd4dc;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 14px;
+}
+
+textarea { min-height: 100px; resize: vertical; }
+
+button,
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    background: #4CAF50;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: #43a047;
+}
+
+.btn-secondary {
+    background: #e0e0e0;
+    color: #111;
+}
+
+.btn-danger {
+    background: #e53935;
+}
+
+.error {
+    color: #c62828;
+    background: #ffebee;
+    border: 1px solid #ffcdd2;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: 10px auto;
+    max-width: 520px;
+}
+
+/* Products list */
+.product-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.product-list li {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.product-list li a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.product-list li a:hover { text-decoration: underline; }
+
+/* Product detail */
+.product-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.product-detail img { border-radius: 8px; max-width: 100%; height: auto; }
+
+.product-meta { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+
+/* Profile */
+.profile {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.profile img { border-radius: 50%; border: 3px solid #e6e6e6; }
+
+/* Header nav */
+header nav form button { background: transparent; border: 1px solid #fff; padding: 6px 10px; border-radius: 6px; }
+header nav form button:hover { background: rgba(255,255,255,0.15); }
+
+/* Utilities */
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 12px; }
+.mt-3 { margin-top: 16px; }
+.mt-4 { margin-top: 20px; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 12px; }
+.mb-3 { margin-bottom: 16px; }
+.mb-4 { margin-bottom: 20px; }
+
+@media (max-width: 640px) {
+    header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    nav a { margin-left: 0; margin-right: 12px; }
+}
