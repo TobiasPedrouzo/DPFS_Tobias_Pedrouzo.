@@ -1,0 +1,54 @@
+CREATE DATABASE IF NOT EXISTS service_app CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE service_app;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(100) NOT NULL,
+  last_name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  role ENUM('client','worker','admin') DEFAULT 'client',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE categories (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE services (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+  worker_id INT NOT NULL,
+  category_id INT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (worker_id) REFERENCES users(id),
+  FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+
+CREATE TABLE ratings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  service_id INT NOT NULL,
+  client_id INT NOT NULL,
+  score TINYINT NOT NULL CHECK (score BETWEEN 1 AND 5),
+  comment TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (service_id) REFERENCES services(id),
+  FOREIGN KEY (client_id) REFERENCES users(id)
+);
+
+CREATE TABLE bookings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  service_id INT NOT NULL,
+  client_id INT NOT NULL,
+  booking_date DATETIME NOT NULL,
+  status ENUM('pending','confirmed','completed','cancelled') DEFAULT 'pending',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (service_id) REFERENCES services(id),
+  FOREIGN KEY (client_id) REFERENCES users(id)
+);
