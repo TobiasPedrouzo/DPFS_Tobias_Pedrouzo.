@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Plomero Profesional",
+    "description": "Servicio de plomería para reparaciones y mantenimiento de cañerías. Atención 24hs.",
+    "image": "plomero.jpg",
+    "category": "hogar",
+    "price": 50
+  },
+  {
+    "id": 2,
+    "name": "Jardinero experto",
+    "description": "Corte de césped, mantenimiento de jardines y diseño de paisajes.",
+    "image": "jardinero.jpg",
+    "category": "exterior",
+    "price": 40
+  },
+  {
+    "id": 3,
+    "name": "Electricista Certificado",
+    "description": "Instalaciones y reparaciones eléctricas seguras. Personal matriculado.",
+    "image": "electricista.jpg",
+    "category": "hogar",
+    "price": 60
+  }
+]

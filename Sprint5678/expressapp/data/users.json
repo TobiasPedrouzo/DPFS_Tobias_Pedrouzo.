@@ -1,0 +1,10 @@
+[
+ {
+  "id": 1,
+  "name": "Tobias",
+  "email": "pedrouzotobias@gmail.com",
+  "password": "$2b$10$oNIVR1D47HkFIXDt0eUT3ujehcU/W1m8STrAHppNDU5sC/jxtHDZ.",
+  "avatar": "/images/users/default.png",
+  "role": "user"
+ }
+]

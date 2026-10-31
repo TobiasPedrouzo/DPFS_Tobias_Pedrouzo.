@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Detalle del servicio</title>
+</head>
+<body>
+    <% if (product) { %>
+        <h1><%= product.name %></h1>
+        <img src="/images/products/<%= product.image %>" alt="<%= product.name %>" width="300">
+        <p><%= product.description %></p>
+        <p>Categoria: <%= product.category %></p>
+        <p>Precio: $<%= product.price %></p>
+        <a href="/products/<%= product.id %>/edit">Editar</a>
+    <% } else { %>
+        <p>Servicio no encontrado.</p>
+    <% } %>
+    <p><a href="/products">Volver al listado</a></p>
+</body>
+</html>
+

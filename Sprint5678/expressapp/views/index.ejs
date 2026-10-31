@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManosYa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>ManosYa</h1>
+        <nav>
+            <a href="/config">⚙️</a>
+            <% if (userLogged) { %>
+                <a href="/users/profile"><i class="fas fa-user"></i></a>
+                <form action="/users/logout" method="post" style="display:inline">
+                    <button type="submit">Salir</button>
+                </form>
+            <% } else { %>
+                <a href="/users/login"><i class="fas fa-user"></i></a>
+            <% } %>
+            <a href="/ubicacion"><i class="fas fa-location-dot"></i> </a>
+        </nav>
+    </header>
+
+<main>
+    <h2>Encuentra profesionales para tu hogar</h2>
+    <p>Contrata plomeros, jardineros y más de forma rápida y segura.</p>
+
+    <div class="services">
+        <div class="card">
+            <h3>Plomero</h3>
+            <p>Reparaciones y mantenimiento de cañerías.</p>
+            <a class="btn-secondary" href="/hire?category=hogar&q=plomero">Contratar</a>
+        </div>
+        <div class="card">
+            <h3>Jardinero</h3>
+            <p>Corte de césped y cuidado de jardines.</p>
+            <a class="btn-secondary" href="/hire?category=exterior&q=jardinero">Contratar</a>
+        </div>
+        <div class="card">
+            <h3>Electricista</h3>
+            <p>Instalaciones y reparaciones eléctricas.</p>
+            <a class="btn-secondary" href="/hire?category=hogar&q=electricista">Contratar</a>
+        </div>
+        <div class="card">
+            <h3>Limpieza</h3>
+            <p>Servicios de limpieza y mantenimiento del hogar.</p>
+            <a class="btn-secondary" href="/hire?q=limpieza">Contratar</a>
+        </div>
+        <div class="card">
+            <h3>Pintor</h3>
+            <p>Pintura de interiores y exteriores.</p>
+            <a class="btn-secondary" href="/hire?q=pintor">Contratar</a>
+        </div>
+        <div class="card">
+            <h3>Obrero</h3>
+            <p>Trabajo general de construcción y reparaciones.</p>
+            <a class="btn-secondary" href="/hire?q=obrero">Contratar</a>
+        </div>
+        <div class="card">
+            <h3>Cerrajero</h3>
+            <p>Instalación y reparación de cerraduras.</p>
+            <a class="btn-secondary" href="/hire?q=cerrajero">Contratar</a>
+        </div>
+        <div class="card">
+            <h3>Carpintero</h3>
+            <p>Fabricación y reparación de muebles y estructuras de madera.</p>
+            <a class="btn-secondary" href="/hire?q=carpintero">Contratar</a>
+        </div>
+        <div class="card">
+            <h3>Aire acondicionado</h3>
+            <p>Instalación y mantenimiento de sistemas de climatización.</p>
+            <a class="btn-secondary" href="/hire?q=aire%20acondicionado">Contratar</a>
+        </div>
+        <div class="card">
+            <h3>Planchador / Lavadero</h3>
+            <p>Servicios de lavandería y planchado a domicilio.</p>
+            <a class="btn-secondary" href="/hire?q=lavadero">Contratar</a>
+        </div>
+        <div class="card">
+            <h3>Reparaciones de electrodomésticos</h3>
+            <p>Reparación de heladeras, lavarropas y más.</p>
+            <a class="btn-secondary" href="/hire?q=electrodom%C3%A9sticos">Contratar</a>
+        </div>
+        <div class="card">
+    <h3>Decorador de interiores</h3>
+    <p>Diseño y decoración de espacios para tu hogar.</p>
+    <a class="btn-secondary" href="/hire?q=decorador">Contratar</a>
+</div>
+
+    </div>
+</main>
+
+
+    <footer>
+        <p>&copy; 2025 ManosYa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
