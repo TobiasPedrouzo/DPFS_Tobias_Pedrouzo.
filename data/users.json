@@ -1,0 +1,4 @@
+[
+  {"id":1,"firstName":"Tobias","lastName":"Pedrouzo","email":"tobias.pedrouzo21@gmail.com","password":"nidosur2026","category":"admin","image":""},
+  {"id":2,"firstName":"Lara","lastName":"Méndez","email":"lara@example.com","password":"nidosur2026","category":"customer","image":""}
+]

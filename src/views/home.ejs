@@ -1,0 +1,11 @@
+<%- include('partials/head', { title }) %>
+<%- include('partials/header') %>
+<main>
+  <section class="hero">
+    <div class="hero-copy"><p class="eyebrow">Diseño consciente · Hecho cerca</p><h1>Lo que elegís para tu casa también cuenta una historia.</h1><p class="lead">Una selección de objetos creados por manos locales, pensados para acompañar tus rituales cotidianos.</p><a class="button" href="/products">Explorar la colección <span>↗</span></a></div>
+    <div class="hero-image"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85" alt="Interior cálido con objetos de diseño"></div>
+  </section>
+  <section class="intro" id="historia"><p class="eyebrow">Nuestra mirada</p><h2>Menos ruido. Más sentido.</h2><p>Trabajamos con marcas y talleres que comparten una forma de hacer: materiales que duran, procesos transparentes y objetos que se vuelven parte de tu vida.</p></section>
+  <section class="section"><div class="section-heading"><div><p class="eyebrow">Selección Nido</p><h2>Objetos para quedarte</h2></div><a class="arrow-link" href="/products">Ver todo →</a></div><div class="product-grid"><% products.forEach(product => { %><%- include('products/card', { product }) %><% }) %></div></section>
+</main>
+<%- include('partials/footer') %>

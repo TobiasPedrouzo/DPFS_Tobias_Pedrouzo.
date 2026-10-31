@@ -1,0 +1,29 @@
+{
+  "name": "nido-sur-marketplace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marketplace full stack desarrollado para el Desafío Profesional Full Stack de Digital House.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "seed": "node database/seed.js",
+    "test": "node --test tests/smoke.test.js",
+    "dashboard:install": "npm --prefix dashboard install",
+    "dashboard:build": "npm --prefix dashboard run build"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.1",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.5-lts.1",
+    "sequelize": "^6.37.5",
+    "sqlite3": "^5.1.7"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+dashboard/node_modules/
+dashboard/dist/
+.env
+database/*.sqlite
+public/images/users/*
+!public/images/users/.gitkeep
+public/images/products/*
+!public/images/products/.gitkeep
+npm-debug.log*
+.DS_Store

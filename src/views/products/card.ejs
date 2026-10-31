@@ -1,0 +1,1 @@
+<article class="product-card"><a href="/products/<%= product.id %>"><div class="product-image"><img src="<%= product.image %>" alt="<%= product.name %>"><span class="product-category"><%= product.category?.name || product.category %></span></div><div class="product-meta"><h3><%= product.name %></h3><p>$ <%= Number(product.price).toLocaleString('es-AR') %></p></div></a></article>

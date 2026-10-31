@@ -1,0 +1,54 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1230 >>
+stream
+0.95 0.93 0.88 rg 0 0 842 842 re f
+0.14 0.19 0.16 rg
+BT /F1 18 Tf 48 780 Td (Nido Sur - Diagrama entidad-relacion) Tj ET
+BT /F1 14 Tf 70 700 Td (USERS) Tj ET
+BT /F1 10 Tf 70 678 Td (PK id) Tj ET
+BT /F1 10 Tf 70 660 Td (firstName / lastName) Tj ET
+BT /F1 10 Tf 70 642 Td (email UNIQUE) Tj ET
+BT /F1 10 Tf 70 624 Td (password / image / category) Tj ET
+BT /F1 14 Tf 285 700 Td (PRODUCTS) Tj ET
+BT /F1 10 Tf 285 678 Td (PK id) Tj ET
+BT /F1 10 Tf 285 660 Td (name / description) Tj ET
+BT /F1 10 Tf 285 642 Td (image / price / stock) Tj ET
+BT /F1 10 Tf 285 624 Td (colors / sizes JSON) Tj ET
+BT /F1 10 Tf 285 606 Td (FK categoryId) Tj ET
+BT /F1 14 Tf 540 700 Td (CATEGORIES) Tj ET
+BT /F1 10 Tf 540 678 Td (PK id) Tj ET
+BT /F1 10 Tf 540 660 Td (name UNIQUE) Tj ET
+BT /F1 10 Tf 540 642 Td (slug UNIQUE) Tj ET
+BT /F1 14 Tf 410 470 Td (CART_ITEMS) Tj ET
+BT /F1 10 Tf 410 448 Td (PK id / FK cartId / FK productId) Tj ET
+BT /F1 10 Tf 410 430 Td (quantity) Tj ET
+BT /F1 11 Tf 70 340 Td (Relaciones: Category 1:N Product | Cart 1:N CartItem | Product 1:N CartItem) Tj ET
+0.14 0.19 0.16 RG 1.5 w 55 585 170 140 re S 270 585 220 140 re S 525 585 180 140 re S 390 405 230 100 re S 225 655 m 270 655 l S 490 655 m 525 655 l S 485 455 m 525 585 l S
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1592
+%%EOF

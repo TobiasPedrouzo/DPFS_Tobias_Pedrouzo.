@@ -1,0 +1,12 @@
+<header class="site-header">
+  <a class="brand" href="/">Nido <em>Sur</em></a>
+  <nav aria-label="Navegación principal">
+    <a href="/products">Colección</a>
+    <a href="/#historia">Nuestra mirada</a>
+    <a href="/dashboard">Dashboard</a>
+  </nav>
+  <div class="header-actions">
+    <% if (currentUser) { %><a class="user-pill" href="/users/profile">Hola, <%= currentUser.firstName %></a><form action="/users/logout" method="post"><button class="link-button" type="submit">Salir</button></form><% } else { %><a href="/users/login">Ingresar</a><a class="button button-small" href="/users/register">Crear cuenta</a><% } %>
+    <a class="cart-link" href="/cart" aria-label="Carrito">Carrito <span id="cart-count">0</span></a>
+  </div>
+</header>

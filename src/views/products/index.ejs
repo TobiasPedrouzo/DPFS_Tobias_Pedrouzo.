@@ -1,0 +1,6 @@
+<%- include('../partials/head', { title }) %>
+<%- include('../partials/header') %>
+<main class="page-shell"><div class="page-intro"><div><p class="eyebrow">La colección</p><h1>Objetos con intención</h1></div><a class="button button-small" href="/products/create">+ Agregar producto</a></div>
+<form class="search-form" method="get"><input name="q" value="<%= query %>" placeholder="Buscar por nombre"><button class="button button-small">Buscar</button></form>
+<div class="product-grid"><% products.forEach(product => { %><%- include('card', { product }) %><% }) %></div></main>
+<%- include('../partials/footer') %>
