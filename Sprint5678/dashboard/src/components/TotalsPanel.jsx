@@ -9,7 +9,7 @@ function TotalsPanel() {
 
     useEffect(() => {
         // Fetch products data
-        fetch('http://localhost:3000/api/products')
+            fetch('/api/products')
             .then(response => response.json())
             .then(data => {
                 setTotals(prevTotals => ({
@@ -21,7 +21,7 @@ function TotalsPanel() {
             .catch(error => console.error('Error fetching products:', error));
 
         // Fetch users data
-        fetch('http://localhost:3000/api/users')
+            fetch('/api/users')
             .then(response => response.json())
             .then(data => {
                 setTotals(prevTotals => ({

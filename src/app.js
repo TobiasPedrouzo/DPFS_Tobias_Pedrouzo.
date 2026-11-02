@@ -26,6 +26,9 @@ app.use(session({
 }));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, '..', 'public')));
+// El dashboard se construye con Vite y queda disponible bajo el mismo origen
+// para que sus llamadas a /api/* funcionen sin configurar otro servidor.
+app.use('/dashboard', express.static(path.join(__dirname, '..', 'dashboard', 'dist'), { index: false, redirect: false }));
 app.use(attachCurrentUser);
 
 app.use('/', webRoutes);

@@ -21,6 +21,8 @@ Descripción personal breve: soy Tobias Pedrouzo, desarrollador en formación, i
 ```bash
 npm install
 npm run seed
+npm run dashboard:install
+npm run dashboard:build
 npm start
 ```
 

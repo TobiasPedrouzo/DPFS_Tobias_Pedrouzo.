@@ -1,0 +1,20 @@
+<%- include('partials/head', { title }) %>
+<%- include('partials/header') %>
+
+<main class="page-shell narrow">
+  <div class="page-intro">
+    <div>
+      <p class="eyebrow">Tu selección</p>
+      <h1>Carrito</h1>
+    </div>
+  </div>
+
+  <section class="empty-state" id="cart-content">
+    <span class="empty-icon" aria-hidden="true">◌</span>
+    <h2>Tu carrito está vacío</h2>
+    <p class="lead">Guardá tus objetos favoritos mientras recorrés la colección.</p>
+    <a class="button" href="/products">Explorar la colección <span>→</span></a>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

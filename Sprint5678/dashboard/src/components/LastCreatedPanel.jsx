@@ -4,14 +4,14 @@ function LastCreatedPanel() {
     const [lastProduct, setLastProduct] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/products')
+        fetch('/api/products')
             .then(response => response.json())
             .then(data => {
                 if (data.products && data.products.length > 0) {
                     // Asumimos que el último producto en la lista es el más reciente
                     const lastProductId = data.products[data.products.length - 1].id;
                     // Hacemos un fetch al detalle para obtener toda la información
-                    fetch(`http://localhost:3000/api/products/${lastProductId}`)
+                        fetch(`/api/products/${lastProductId}`)
                         .then(res => res.json())
                         .then(productDetail => {
                             setLastProduct(productDetail);

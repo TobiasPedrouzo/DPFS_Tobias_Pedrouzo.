@@ -4,7 +4,7 @@ function ProductsListPanel() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/products')
+        fetch('/api/products')
             .then(response => response.json())
             .then(data => {
                 if (data.products) {

@@ -11,6 +11,7 @@ app.use(express.static('public'));
 app.use('/Styles', express.static(path.join(__dirname, '/Styles')));
 app.use('/styles', express.static(path.join(__dirname, '/Styles')));
 app.use('/js', express.static(path.join(__dirname, '/public/js')));
+app.use('/dashboard', express.static(path.join(__dirname, '../dashboard/dist'), { index: false, redirect: false }));
 app.use(express.urlencoded({ extended: false })); 
 app.use(express.json()); 
 app.use(methodOverride('_method')); 
