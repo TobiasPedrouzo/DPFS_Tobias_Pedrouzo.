@@ -18,7 +18,11 @@ Descripción personal breve: soy Tobias Pedrouzo, desarrollador en formación, i
 
 ## Cómo ejecutar
 
+Desde una copia local del repositorio:
+
 ```bash
+git clone https://github.com/TobiasPedrouzo/DPFS_Tobias_Pedrouzo.git
+cd DPFS_Tobias_Pedrouzo
 npm install
 npm run seed
 npm run dashboard:install
